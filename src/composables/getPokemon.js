@@ -9,7 +9,7 @@ const getPokemon = (id) => {
     try {
       let data = await fetch('https://pokeapi.co/api/v2/pokemon/' + id)
       if (!data.ok) {
-        throw Error('not found')
+        throw Error(`${id} not found`)
       }
       pokemon.value = await data.json()
 

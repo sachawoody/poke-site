@@ -13,26 +13,27 @@
     </ul>
     <div v-if="team.length === 0">No pokemon in team</div>
     <div v-else-if="team.length >= 6">Team is full</div>
-    <div v-else>
-      <select v-model="selectedPokemon">
-        <option v-for="pokemon in pokemonList" :key="pokemon">{{ pokemon.name }}</option>
-      </select>
-      <button @click="addPokemon" :disabled="!selectedPokemon">
-        Add to Team
-      </button>
-    </div>
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
-import getPokedex from "@/composables/getPokedex";
 
 export default {
   components: {},
   setup() {
-    const team = ref([{name: 'Pikachu'}, {name: 'Charizard'}, {name: 'Pikachu'}, {name: 'Moi'}]);
-    const pokemonList = ref([{name: 'Pikachu'}, {name: 'Charizard'}, {name: 'Pikachu'}, {name: 'Moi'}]);
+    const team = ref([
+      { name: "Pikachu" },
+      { name: "Charizard" },
+      { name: "Pikachu" },
+      { name: "Moi" },
+    ]);
+    const pokemonList = ref([
+      { name: "Pikachu" },
+      { name: "Charizard" },
+      { name: "Pikachu" },
+      { name: "Moi" },
+    ]);
 
     const selectedPokemon = ref(null);
 
