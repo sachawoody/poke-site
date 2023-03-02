@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <Team />
+  <!-- <Team /> -->
   <router-view />
 </template>
 

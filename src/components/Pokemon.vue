@@ -1,4 +1,5 @@
 <template>
+    <!-- display pokemon infos -->
     <div v-if="pokemon">
         <p>Pokemon: {{ pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1) }}</p>
         <p>Number: {{ pokemon.id }}</p>
@@ -10,6 +11,7 @@
 
 <script>
 export default {
+    // use pokemon object from views/pokedex (display poke-card for one pokemon)
     props: {
         pokemon: {
             type: Object,
@@ -19,8 +21,4 @@ export default {
 }
 </script>
 
-<style>
-
-
-
-</style>
+<style></style>
