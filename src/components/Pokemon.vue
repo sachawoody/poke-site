@@ -19,13 +19,12 @@
 
 <script>
 export default {
-    // use pokemon object from views/pokedex (display poke-card for one pokemon)
     props: {
         pokemon: {
             type: Object,
             required: true,
         },
-    },
+    }
 };
 </script>
 

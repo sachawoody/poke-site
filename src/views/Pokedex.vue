@@ -7,28 +7,21 @@
   <p>Searching for: {{ search }}</p>
 
   <!-- Display pokedex -->
-  <div class="pokedex" v-if="inputEmpty">
-    <div
-      v-for="pokemon in filteredList"
-      :key="pokemon.id"
-      :class="'pokemon-' + pokemon.name + ' pokemon'"
-    >
-      <!-- Use component for each pokemon to display name, index and image -->
-      <Pokemon :pokemon="pokemon" />
-    </div>
-  </div>
-
-  <!-- Display pokemon matching search -->
-  <div v-else class="search-pokedex">
-    <p>Number of match: {{ filteredList.length }}</p>
-    <div class="pokedex">
-      <div
-        v-for="pokemon in filteredList"
-        :key="pokemon.id"
-        :class="'pokemon-' + pokemon.name + ' pokemon'"
-      >
+  <div class="scroll-container">
+    <div class="pokedex" v-if="inputEmpty">
+      <div v-for="pokemon in filteredList" :key="pokemon.id" :class="'pokemon-' + pokemon.name + ' pokemon'">
         <!-- Use component for each pokemon to display name, index and image -->
         <Pokemon :pokemon="pokemon" />
+      </div>
+    </div>
+    <!-- Display pokemon matching search -->
+    <div v-else class="search-pokedex">
+      <p>Number of match: {{ filteredList.length }}</p>
+      <div class="pokedex">
+        <div v-for="pokemon in filteredList" :key="pokemon.id" :class="'pokemon-' + pokemon.name + ' pokemon'">
+          <!-- Use component for each pokemon to display name, index and image -->
+          <Pokemon :pokemon="pokemon" />
+        </div>
       </div>
     </div>
   </div>
@@ -108,12 +101,15 @@ export default {
   justify-content: center;
 }
 
+
 .pokemon {
   background: #ddd;
   color: #444;
   border-radius: 10px;
   font-size: 16px;
 }
+
+
 
 a {
   color: #333;
@@ -133,5 +129,10 @@ button {
   letter-spacing: 1px;
   cursor: pointer;
   margin: 10px;
+}
+
+.scroll-container {
+  height: 600px;
+  overflow-y: scroll;
 }
 </style>

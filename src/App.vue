@@ -8,19 +8,12 @@
 import Navbar from './components/Navbar.vue'
 import Team from './components/Team.vue'
 export default {
-  components: { Navbar, Team },
-
-  methods: {
-    toggleModal() {
-      this.showModal = !this.showModal;
-    }
-  },
+  components: { Navbar, Team }  
 }
 
 </script>
 
 <style>
-
 /* @font-face {
   font-family: 'Pokemon Font';
   font-style: normal;

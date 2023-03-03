@@ -13,12 +13,6 @@ import { useRoute } from "vue-router";
 export default {
   props: ["id"],
   components: { PokemonDetails },
-  // data() {
-  //   return {
-  //     sprite: null
-  //   }
-  // },
-
   setup(props) {
     const route = useRoute();
     const { error, pokemon, load } = getPokemon(route.params.id);
