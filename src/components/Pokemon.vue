@@ -14,6 +14,9 @@
             pokemon.id +
             '.png'
         " :alt="pokemon.name" />
+        <button @click="addPokemonToTeam">
+            Add to Team
+        </button>
     </div>
 </template>
 
@@ -24,6 +27,12 @@ export default {
             type: Object,
             required: true,
         },
+    },
+    methods: {
+        addPokemonToTeam() {
+            console.log('added', this.pokemon.name, 'to team')
+            this.$emit('add-pokemon', this.pokemon);
+        }
     }
 };
 </script>

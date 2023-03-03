@@ -4,8 +4,8 @@
 </template>
   
 <script>
-import PokemonDetails from "@/components/PokemonDetails.vue";
-import getPokemon from "@/composables/getPokemon";
+import PokemonDetails from "../components/PokemonDetails.vue";
+import getPokemon from "../composables/getPokemon";
 import { useRoute } from "vue-router";
 
 // component imports

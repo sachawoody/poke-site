@@ -31,8 +31,8 @@
 import { ref, computed, watch } from "vue";
 import { useRoute } from "vue-router";
 
-import getPokedex from "@/composables/getPokedex";
-import Pokemon from "@/components/Pokemon.vue";
+import getPokedex from "../composables/getPokedex";
+import Pokemon from "../components/Pokemon.vue";
 
 export default {
   props: ["id"],

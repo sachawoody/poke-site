@@ -8,23 +8,18 @@
 import Navbar from './components/Navbar.vue'
 import Team from './components/Team.vue'
 export default {
-  components: { Navbar, Team }  
+  components: { Navbar, Team } ,
+  props: {
+    pokemons: {
+      type: String,
+    },
+  } 
 }
 
 </script>
 
 <style>
-/* @font-face {
-  font-family: 'Pokemon Font';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Pokemon Font'), url('pokefont.ttf') format('tff');
-}
 
-body {
-  font-family: Pokemon Font;
-
-} */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
